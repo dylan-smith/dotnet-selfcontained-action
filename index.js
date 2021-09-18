@@ -6,4 +6,4 @@ Object.keys(env).forEach(function(key) {
   console.log('export ' + key + '="' + env[key] +'"');
 });
 
-execSync('pwsh run-action.ps1', { stdio: 'inherit' });
+execSync('pwsh run-action.ps1', { env: process.env, stdio: 'inherit' });
