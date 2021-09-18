@@ -1,5 +1,8 @@
 const { execSync } = require('child_process');
 
+process.env['DYLAN_FOO'] = "blah";
+process.env['INPUT_INPUT-C'] = "efqwfqwefqw";
+
 var foo = process.env;
 
 Object.keys(foo).forEach(function(key) {
