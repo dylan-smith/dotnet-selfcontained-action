@@ -13,5 +13,5 @@ jobs:
     - uses: actions/checkout@v2
     - uses: ./
       with:
-        input-a: hello's dylan
+        input-a: hello dylan
         input-b: world
