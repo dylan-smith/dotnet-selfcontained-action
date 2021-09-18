@@ -1,19 +1,20 @@
 const { execSync } = require('child_process');
 
-process.env['DYLAN_FOO2'] = "blah2";
-process.env['INPUT_INPUT-C'] = "efqwfqwefqw";
+// process.env['DYLAN_FOO2'] = "blah2";
+// process.env['INPUT_INPUT-C'] = "efqwfqwefqw";
 
-var foo = process.env;
+// var foo = process.env;
 
-Object.keys(foo).forEach(function(key) {
-  console.log('export ' + key + '="' + foo[key] +'"');
-});
+// Object.keys(foo).forEach(function(key) {
+//   console.log('export ' + key + '="' + foo[key] +'"');
+// });
 
 // foo.DYLAN_FOO = "blah";
 // foo.INPUT_INPUT_C = "qwefqfqe";
 
 try {
-    execSync('./run-action.ps1', { env: {...foo, DYLAN_FOO: "blah", "INPUT_INPUT-C": "qwfqwfqwfe"}, stdio: 'inherit', shell: "pwsh" });
+    // execSync('./run-action.ps1', { env: {...foo, DYLAN_FOO: "blah", "INPUT_INPUT-C": "qwfqwfqwfe"}, stdio: 'inherit', shell: "pwsh" });
+    execSync('./run-action.ps1', { stdio: 'inherit', shell: "pwsh" });
 } catch(err) {
     console.log("error!");
     console.log(err.message);
