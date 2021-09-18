@@ -1,6 +1,6 @@
 const { execSync } = require('child_process');
 
-process.env['DYLAN_FOO'] = "blah";
+process.env['DYLAN_FOO2'] = "blah2";
 process.env['INPUT_INPUT-C'] = "efqwfqwefqw";
 
 var foo = process.env;
