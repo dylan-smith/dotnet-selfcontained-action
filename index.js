@@ -1,13 +1,13 @@
-const { spawnSync } = require('child_process');
+const { execSync } = require('child_process');
 
-var env = process.env;
+var foo = process.env;
 
-Object.keys(env).forEach(function(key) {
-  console.log('export ' + key + '="' + env[key] +'"');
+Object.keys(foo).forEach(function(key) {
+  console.log('export ' + key + '="' + foo[key] +'"');
 });
 
 try {
-    spawnSync('pwsh run-action.ps1', { env: process.env, stdio: 'inherit' });
+    execSync('pwsh run-action.ps1', { env: foo, stdio: 'inherit' });
 } catch(err) {
     console.log("error!");
     console.log(err.message);
